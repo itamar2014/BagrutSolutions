@@ -21,5 +21,4 @@ public class AllNumbers {
 
         System.out.println(a.lastOddValue());
     }
-
 }
