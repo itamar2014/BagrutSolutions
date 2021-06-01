@@ -54,10 +54,10 @@ public class Weight {
 
         boolean size;
 
-        size = (this.getKilo() < other.getKilo()) ? true : false;
+        size = this.getKilo() < other.getKilo();
 
         if (this.getKilo() == other.getKilo()) {
-            size = (this.getGram() < other.getGram()) ? true : false;
+            size = this.getGram() < other.getGram();
 
         }
         return size;
