@@ -1,2 +1,2 @@
 # BagrutSolutions
- Every Bagrut in Computer Science
+ Every Bagrut solution in Computer Science
