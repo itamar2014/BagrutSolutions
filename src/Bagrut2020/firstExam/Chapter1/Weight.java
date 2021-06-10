@@ -24,17 +24,20 @@ public class Weight {
     }
 
     //Constructors
-    public Weight() {
-    }
 
+    //A
+    public Weight() { }
+
+    //B
     public Weight(int kilo, int gram) {
         this.kilo = kilo;
         this.gram = gram;
     }
 
+    //C
     public Weight(int totalGram) {
-        this.kilo = Math.round(totalGram / 1000);
-        this.gram = Math.round(totalGram % 1000);
+        this.kilo = totalGram / 1000;
+        this.gram = totalGram % 1000;
     }
 
     public void add(Weight other) {
@@ -42,9 +45,9 @@ public class Weight {
         this.gram += other.getGram();
 
         this.kilo += other.getKilo();
-
         if (this.getGram() >= 1000) {
-            this.kilo = this.getGram() / 1000;
+            this.kilo += this.getGram() / 1000;
+
             this.gram = this.getGram() % 1000;
         }
 
@@ -75,12 +78,24 @@ public class Weight {
         public Weight sum(){
             Weight sum = new Weight();
 
-            for( Weight i : arr){
+            /*
+            for(int i = 0; i< arr.length; i++){
+                sum.add(arr[i]);
+            }
+             */
+
+            for( Weight i : arr)
                 sum.add(i);
 
-            }
 
             return sum;
         }
+    }
+
+    public static void main(String[] args) {
+
+        Weight weight = new Weight(3999);
+        System.out.println( "K: " + weight.getKilo() + " \nG: "+ weight.getGram());
+
     }
 }
