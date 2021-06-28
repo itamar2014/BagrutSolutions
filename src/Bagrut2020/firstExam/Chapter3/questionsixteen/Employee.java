@@ -18,7 +18,7 @@ public class Employee {
     public int GetScore(){
 
         int finalPoints;
-        finalPoints = this.getYears() +4;
+        finalPoints = this.getYears() + 4;
 
         return finalPoints;
     }
